@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+}
+.box {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Đặt hình dạng hình tròn */
+    border: 2px solid black; /* Đặt viền và màu cho viền */
+    position: absolute;
+    transition: 0.2s;
+}
+.main {
+    position: relative;
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#fps {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
