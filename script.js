@@ -1,15 +1,15 @@
 let main = document.getElementById("main");
 for (let i = 0; i < 1000; i++) {
-    let ladybug = document.createElement("div");
-    ladybug.classList.add("box");
-    ladybug.style.width = Math.floor(Math.random() * 11 + 10) + "px"; // Random đường kính từ 10 đến 20px
-    ladybug.style.height = ladybug.style.width;
-    ladybug.style.backgroundColor = "transparent";
-    let x = Math.random() * (window.innerWidth - parseInt(ladybug.style.width));
-    let y = Math.random() * (window.innerHeight - parseInt(ladybug.style.height));
-    ladybug.style.left = x + "px";
-    ladybug.style.top = y + "px";
-    main.appendChild(ladybug);
+    let circle = document.createElement("div");
+    circle.classList.add("box");
+    circle.style.width = Math.floor(Math.random() * (91) + 10) + "px"; // Random đường kính từ 10 đến 100px
+    circle.style.height = circle.style.width;
+    circle.style.backgroundColor = "transparent";
+    let x = Math.random() * (window.innerWidth - parseInt(circle.style.width));
+    let y = Math.random() * (window.innerHeight - parseInt(circle.style.height));
+    circle.style.left = x + "px";
+    circle.style.top = y + "px";
+    main.appendChild(circle);
 }
 
 let boxes = document.querySelectorAll(".box");
@@ -20,7 +20,7 @@ let fpsDisplay = document.getElementById("fps");
 function moveObject(box, angle) {
     let x = parseFloat(box.style.left);
     let y = parseFloat(box.style.top);
-    let speed = 10; // Pixels per second
+    let speed = 15; // Pixels per second
 
     function animate(timestamp) {
         let elapsed = timestamp ? timestamp - lastTimestamp : 0;
